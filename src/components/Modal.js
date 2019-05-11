@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 import { Score } from "./Score";
 import { Title } from "../App";
 import Button from "./Button";
 
-const Modal = ({ score, newGame, resetScore }) => {
+const Modal = ({ score, newGame, resetScore, winner }) => {
   return (
     <ModalContainer>
       <ModalContent>
-        <Title>You won!</Title>
+        <Title>{winner ? `You won!` : `Its a draw!`}</Title>
         <div>
           <ScoreArea>
             <SubTitle>Current Score:</SubTitle>
@@ -26,6 +27,17 @@ const Modal = ({ score, newGame, resetScore }) => {
       </ModalContent>
     </ModalContainer>
   );
+};
+
+Modal.propTypes = {
+  score: PropTypes.shape({
+    x: PropTypes.number,
+    o: PropTypes.number,
+    draw: PropTypes.number
+  }),
+  winner: PropTypes.oneOf([null, "x", "o"]).isRequired,
+  newGame: PropTypes.func.isRequired,
+  resetScore: PropTypes.func.isRequired
 };
 
 const ModalContainer = styled.div`
