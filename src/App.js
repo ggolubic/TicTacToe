@@ -32,68 +32,74 @@ class App extends React.Component {
     this.setState({ board: board, maxTurn: maxTurn });
   };
 
-  handleTurn = (index, parentIndex) => {
+  handleTurn = (colIndex, rowIndex) => {
     let newBoard = [...this.state.board];
-    if (newBoard[parentIndex][index] === "" && !this.state.winner) {
-      newBoard[parentIndex][index] = this.state.player;
+    if (newBoard[rowIndex][colIndex] === "" && !this.state.winner) {
+      newBoard[rowIndex][colIndex] = this.state.player;
       this.setState(prevState => ({
         board: newBoard,
         player: this.state.player === "x" ? "o" : "x",
         turn: prevState.turn + 1
       }));
-      this.checkWinner(this.state.player);
+      this.checkWinner(this.state.player, colIndex, rowIndex);
     }
   };
 
-  checkWinner = player => {
+  checkWinner = (player, colIndex, rowIndex) => {
     const turn = this.state.turn;
     const size = this.state.size;
     const maxTurn = this.state.maxTurn;
-    if (turn < size * 2 - 2) return false;
-    if (this.checkHorizontalWin(player)) this.setWinner();
-    else if (this.checkVerticalWin(player)) this.setWinner();
-    else if (this.checkDiagonalWin(player)) this.setWinner();
+    if (turn < size * 2 - 2) return false; //eg. if size is 4, there have to be 7 turns before checking
+    if (this.checkHorizontalWin(player, rowIndex)) this.setWinner();
+    else if (this.checkVerticalWin(player, colIndex)) this.setWinner();
+    else if (this.checkDiagonalWin(player, colIndex, rowIndex))
+      this.setWinner();
     else if (turn === maxTurn) this.setDraw();
     else return false;
   };
 
-  checkHorizontalWin = player => {
+  //Removed nested for loops, checks only the row at which the last player made a play
+  checkHorizontalWin = (player, rowIndex) => {
     const size = this.state.size;
     const board = [...this.state.board];
-    for (let row = 0; row < size; row++) {
-      let total = 0;
-      for (let col = 0; col < size; col++) {
-        total += board[row][col].charCodeAt();
-      }
-      if (total % player.charCodeAt() === 0) return true;
-    }
-  };
-
-  checkVerticalWin = player => {
-    const size = this.state.size;
-    const board = [...this.state.board];
-    for (let col = 0; col < size; col++) {
-      let total = 0;
-      for (let row = 0; row < size; row++) {
-        total += board[row][col].charCodeAt();
-      }
-      if (total % player.charCodeAt() === 0) return true;
-    }
-  };
-
-  checkDiagonalWin = player => {
     let total = 0;
+    for (let col = 0; col < size; col++) {
+      total += board[rowIndex][col].charCodeAt();
+    }
+    if (total % player.charCodeAt() === 0) return true;
+  };
+
+  //Removed nested for loops, checks only the column at which the last player made a play
+  checkVerticalWin = (player, colIndex) => {
     const size = this.state.size;
     const board = [...this.state.board];
-    for (let i = 0; i < size; i++) {
-      total += board[i][i].charCodeAt();
+    let total = 0;
+    for (let row = 0; row < size; row++) {
+      total += board[row][colIndex].charCodeAt();
     }
     if (total % player.charCodeAt() === 0) return true;
-    total = 0;
-    for (let j = 0; j < size; j++) {
-      total += board[j][size - j - 1].charCodeAt();
+  };
+
+  checkDiagonalWin = (player, colIndex, rowIndex) => {
+    const size = this.state.size;
+    let total = 0;
+    const board = [...this.state.board];
+    //Check diag only if the last play was made on the diagonal
+    if (rowIndex === colIndex) {
+      for (let i = 0; i < size; i++) {
+        total += board[i][i].charCodeAt();
+      }
+      if (total % player.charCodeAt() === 0) return true;
     }
-    if (total % player.charCodeAt() === 0) return true;
+
+    //Check antidiag only if the last play was made on the antidiagonal
+    if (rowIndex + colIndex === size - 1) {
+      total = 0;
+      for (let j = 0; j < size; j++) {
+        total += board[j][size - j - 1].charCodeAt();
+      }
+      if (total % player.charCodeAt() === 0) return true;
+    }
   };
 
   increaseScore = () => {
@@ -153,12 +159,12 @@ class App extends React.Component {
         <Title>Tic Tac Toe App</Title>
         <Score score={score} />
         <Board>
-          {board.map((fieldSet, parentIndex) => {
-            return fieldSet.map((field, index) => (
+          {board.map((fieldSet, rowIndex) => {
+            return fieldSet.map((field, colIndex) => (
               <Field
-                key={index}
+                key={colIndex}
                 player={player}
-                handleTurn={() => this.handleTurn(index, parentIndex)}
+                handleTurn={() => this.handleTurn(colIndex, rowIndex)}
                 content={field}
                 size={size}
               >
