@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Field } from "./components/Field";
-import { Score } from "./components/Score";
+import Field from "./components/Field";
+import Score from "./components/Score";
 import Button from "./components/Button";
 import Modal from "./components/Modal";
 
@@ -32,7 +32,7 @@ class App extends React.Component {
     this.setState({ board: board, maxTurn: maxTurn });
   };
 
-  handleTurn = (colIndex, rowIndex) => {
+  handleTurn = (rowIndex, colIndex) => {
     let newBoard = [...this.state.board];
     if (newBoard[rowIndex][colIndex] === "" && !this.state.winner) {
       newBoard[rowIndex][colIndex] = this.state.player;
@@ -67,6 +67,7 @@ class App extends React.Component {
       total += board[rowIndex][col].charCodeAt();
     }
     if (total % player.charCodeAt() === 0) return true;
+    return false;
   };
 
   //Removed nested for loops, checks only the column at which the last player made a play
@@ -78,6 +79,7 @@ class App extends React.Component {
       total += board[row][colIndex].charCodeAt();
     }
     if (total % player.charCodeAt() === 0) return true;
+    return false;
   };
 
   checkDiagonalWin = (player, colIndex, rowIndex) => {
@@ -100,6 +102,7 @@ class App extends React.Component {
       }
       if (total % player.charCodeAt() === 0) return true;
     }
+    return false;
   };
 
   increaseScore = () => {
@@ -164,7 +167,7 @@ class App extends React.Component {
               <Field
                 key={colIndex}
                 player={player}
-                handleTurn={() => this.handleTurn(colIndex, rowIndex)}
+                handleTurn={() => this.handleTurn(rowIndex, colIndex)}
                 content={field}
                 size={size}
               >
