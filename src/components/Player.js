@@ -10,6 +10,11 @@ const Player = ({ num, score }) => {
   );
 };
 
+Player.defaultProps = {
+  num: 0,
+  score: 0
+};
+
 Player.propTypes = {
   num: PropTypes.number.isRequired,
   score: PropTypes.number.isRequired

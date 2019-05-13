@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import Player from "./Player";
 
-export const Score = ({ score }) => {
+const Score = ({ score }) => {
   return (
     <ScoreContainer>
       <Player num={1} score={score.x} />
@@ -11,6 +12,20 @@ export const Score = ({ score }) => {
     </ScoreContainer>
   );
 };
+
+Score.defaultProps = {
+  score: { x: 0, o: 0, draw: 0 }
+};
+
+Score.propTypes = {
+  score: PropTypes.shape({
+    x: PropTypes.number.isRequired,
+    o: PropTypes.number.isRequired,
+    draw: PropTypes.number.isRequired
+  })
+};
+
+export default Score;
 
 const ScoreContainer = styled.div`
   font-family: "Montserrat", sans-serif;

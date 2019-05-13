@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
-export const Field = props => {
+const Field = props => {
   return (
     <FieldDiv
       player={props.player}
@@ -15,13 +15,22 @@ export const Field = props => {
   );
 };
 
+Field.defaultProps = {
+  player: "x",
+  content: "",
+  size: 3,
+  handleTurn: () => {}
+};
+
 Field.propTypes = {
   player: PropTypes.oneOf(["x", "o"]),
   content: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
   handleTurn: PropTypes.func.isRequired,
-  children: PropTypes.string.isRequired
+  children: PropTypes.string
 };
+
+export default Field;
 
 const FieldDiv = styled.div`
   background-color: ${props => {
@@ -31,7 +40,7 @@ const FieldDiv = styled.div`
   }};
   margin: 5px;
   position: relative;
-  width: calc(100% / ${props => props.size} - 15px);
+  width: calc(100% / ${props => props.size} - 10px);
   height: calc(100% / ${props => props.size} - 15px);
   border-radius: 10%;
   text-align: center;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import { Score } from "./Score";
+import Score from "./Score";
 import { Title } from "../App";
 import Button from "./Button";
 
@@ -29,17 +29,25 @@ const Modal = ({ score, newGame, resetScore, winner }) => {
   );
 };
 
+Modal.defaultProps = {
+  score: { x: 0, o: 0, draw: 0 },
+  winner: null,
+  newGame: () => {},
+  resetScore: () => {}
+};
+
 Modal.propTypes = {
   score: PropTypes.shape({
     x: PropTypes.number,
     o: PropTypes.number,
     draw: PropTypes.number
-  }),
-  winner: PropTypes.oneOf([null, "x", "o"]).isRequired,
+  }).isRequired,
+  winner: PropTypes.oneOf([null, "x", "o"]),
   newGame: PropTypes.func.isRequired,
   resetScore: PropTypes.func.isRequired
 };
 
+export default Modal;
 const ModalContainer = styled.div`
   position: absolute;
   left: 0;
@@ -52,6 +60,7 @@ const ModalContainer = styled.div`
 
 const ModalContent = styled.div`
   position: absolute;
+
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -75,5 +84,3 @@ const ModalNewGame = styled.div`
   text-align: center;
   margin-top: 50px;
 `;
-
-export default Modal;
