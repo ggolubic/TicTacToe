@@ -17,8 +17,16 @@ describe("App component", () => {
 
   it("Should render x*x fields if board size is x", () => {
     const wrapper = mount(<App />);
+    const instance = wrapper.instance();
     expect(wrapper.state().size).toBe(5);
     expect(wrapper.children().find(Field).length).toBe(25);
+    //set new size
+    wrapper.setState({ size: 3 });
+    //update board internally
+    instance.initBoard();
+    //force re-render
+    wrapper.update();
+    expect(wrapper.children().find(Field).length).toBe(9);
   });
 
   it("handleTurn should update board,increase turn and switch player if board position is empty", () => {
@@ -80,7 +88,7 @@ describe("App component", () => {
     expect(wrapper.state().gameDone).toBe(true);
   });
 
-  it("Should call newGame after clicking on button", () => {
+  it("Should trigger newGame after clicking on button", () => {
     const wrapper = mount(<App />);
     const instance = wrapper.instance();
     //add something on board
@@ -96,7 +104,7 @@ describe("App component", () => {
     expect(wrapper.state().board[0][0]).toBe("");
   });
 
-  it("Should call resetScore after clicking on button", () => {
+  it("Should trigger resetScore after clicking on button", () => {
     const wrapper = mount(<App />);
     const instance = wrapper.instance();
     //add something on board
