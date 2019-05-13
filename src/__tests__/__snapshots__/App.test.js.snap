@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component Should render correctly 1`] = `
+Array [
+  .c0 {
+  font-family: "Montserrat",sans-serif;
+  text-align: center;
+}
+
+<h1
+    className="c0"
+  >
+    Tic Tac Toe App
+  </h1>,
+  .c1 {
+  color: #545454;
+}
+
+.c2 {
+  color: #ffd02d;
+}
+
+.c0 {
+  font-family: "Montserrat",sans-serif;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+<div
+    className="c0"
+  >
+    <h2
+      className="c1"
+    >
+      Player 
+      1
+      : 
+      0
+    </h2>
+    <h2
+      className="c2"
+    >
+      Player 
+      2
+      : 
+      0
+    </h2>
+    <h2>
+      Draw: 
+      0
+    </h2>
+  </div>,
+  .c1 {
+  background-color: #14bdac;
+  margin: 5px;
+  position: relative;
+  width: calc(100% / 5 - 10px);
+  height: calc(100% / 5 - 15px);
+  border-radius: 10%;
+  text-align: center;
+}
+
+.c1:hover {
+  background: #545454;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.c1 h2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0 auto;
+  padding: 0;
+  font-size: 5vw;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50vw;
+  height: 50vw;
+}
+
+@media (max-width:1000px) {
+  .c1 h2 {
+    top: 40%;
+  }
+}
+
+@media (min-width:1000px) {
+  .c0 {
+    width: 40vw;
+    height: 30vw;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+
+<div
+    className="c0"
+  >
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+    <div
+      className="c1"
+      content=""
+      onClick={[Function]}
+      size={5}
+    >
+      <h2>
+        
+      </h2>
+    </div>
+  </div>,
+  .c1 {
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4%;
+  background: transparent;
+  border: 2px solid #ddbc95;
+  color: #ddbc95;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+  background: #ddbc95;
+  color: white;
+}
+
+.c1:hover {
+  color: white;
+  background: #ddbc95;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c1:hover {
+  color: #ddbc95;
+  background: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c2 {
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4%;
+  background: transparent;
+  border: 2px solid #ddbc95;
+  color: #ddbc95;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+
+.c2:hover {
+  color: white;
+  background: #ddbc95;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c0 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+<div
+    className="c0"
+  >
+    <button
+      className="c1"
+      onClick={[Function]}
+    >
+      New Round
+    </button>
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      Reset Score
+    </button>
+  </div>,
+]
+`;

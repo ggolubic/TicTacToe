@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component renders with props correctly 1`] = `
+.c0 {
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4%;
+  background: transparent;
+  border: 2px solid #ddbc95;
+  color: #ddbc95;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+  background: #ddbc95;
+  color: white;
+}
+
+.c0:hover {
+  color: white;
+  background: #ddbc95;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c0:hover {
+  color: #ddbc95;
+  background: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`Button component renders without props correctly 1`] = `
+.c0 {
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4%;
+  background: transparent;
+  border: 2px solid #ddbc95;
+  color: #ddbc95;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+
+.c0:hover {
+  color: white;
+  background: #ddbc95;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+<button
+  className="c0"
+/>
+`;

@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field component Should render correctly with default props 1`] = `
+.c0 {
+  background-color: #14bdac;
+  margin: 5px;
+  position: relative;
+  width: calc(100% / 3 - 10px);
+  height: calc(100% / 3 - 15px);
+  border-radius: 10%;
+  text-align: center;
+}
+
+.c0:hover {
+  background: #545454;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.c0 h2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0 auto;
+  padding: 0;
+  font-size: 5vw;
+}
+
+@media (max-width:1000px) {
+  .c0 h2 {
+    top: 40%;
+  }
+}
+
+<div
+  className="c0"
+  content=""
+  onClick={[Function]}
+  size={3}
+>
+  <h2 />
+</div>
+`;
+
+exports[`Field component Should render correctly with passed props 1`] = `
+.c0 {
+  background-color: #545454;
+  margin: 5px;
+  position: relative;
+  width: calc(100% / 5 - 10px);
+  height: calc(100% / 5 - 15px);
+  border-radius: 10%;
+  text-align: center;
+}
+
+.c0 h2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0 auto;
+  padding: 0;
+  font-size: 5vw;
+}
+
+@media (max-width:1000px) {
+  .c0 h2 {
+    top: 40%;
+  }
+}
+
+<div
+  className="c0"
+  content="x"
+  onClick={[MockFunction]}
+  size={5}
+>
+  <h2>
+    x
+  </h2>
+</div>
+`;

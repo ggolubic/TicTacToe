@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player component Should render correctly with default props 1`] = `
+.c0 {
+  color: #ffd02d;
+}
+
+<h2
+  className="c0"
+>
+  Player 
+  0
+  : 
+  0
+</h2>
+`;
+
+exports[`Player component Should render correctly with passed props 1`] = `
+.c0 {
+  color: #545454;
+}
+
+<h2
+  className="c0"
+>
+  Player 
+  1
+  : 
+  0
+</h2>
+`;

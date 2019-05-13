@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Score component Should render with default props 1`] = `
+.c1 {
+  color: #545454;
+}
+
+.c2 {
+  color: #ffd02d;
+}
+
+.c0 {
+  font-family: "Montserrat",sans-serif;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+<div
+  className="c0"
+>
+  <h2
+    className="c1"
+  >
+    Player 
+    1
+    : 
+    0
+  </h2>
+  <h2
+    className="c2"
+  >
+    Player 
+    2
+    : 
+    0
+  </h2>
+  <h2>
+    Draw: 
+    0
+  </h2>
+</div>
+`;
+
+exports[`Score component Should render with passed props 1`] = `
+.c1 {
+  color: #545454;
+}
+
+.c2 {
+  color: #ffd02d;
+}
+
+.c0 {
+  font-family: "Montserrat",sans-serif;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+<div
+  className="c0"
+>
+  <h2
+    className="c1"
+  >
+    Player 
+    1
+    : 
+    1
+  </h2>
+  <h2
+    className="c2"
+  >
+    Player 
+    2
+    : 
+    1
+  </h2>
+  <h2>
+    Draw: 
+    0
+  </h2>
+</div>
+`;

@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal component Should render correctly with default props 1`] = `
+.c6 {
+  color: #545454;
+}
+
+.c7 {
+  color: #ffd02d;
+}
+
+.c5 {
+  font-family: "Montserrat",sans-serif;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.c9 {
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4%;
+  background: transparent;
+  border: 2px solid #ddbc95;
+  color: #ddbc95;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+  background: #ddbc95;
+  color: white;
+}
+
+.c9:hover {
+  color: white;
+  background: #ddbc95;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c9:hover {
+  color: #ddbc95;
+  background: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c10 {
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4%;
+  background: transparent;
+  border: 2px solid #ddbc95;
+  color: #ddbc95;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+
+.c10:hover {
+  color: white;
+  background: #ddbc95;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c2 {
+  font-family: "Montserrat",sans-serif;
+  text-align: center;
+}
+
+.c0 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0%;
+  z-index: 1;
+  background: rgba(0,0,0,0.5);
+}
+
+.c1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border-radius: 5%;
+  width: 450px;
+  height: 400px;
+  background: white;
+  -webkit-transition: all 350ms cubic-bezier(0.68,-0.55,0.265,1.18);
+  transition: all 350ms cubic-bezier(0.68,-0.55,0.265,1.18);
+}
+
+.c3 {
+  text-align: center;
+}
+
+.c4 {
+  font-family: "Montserrat",sans-serif;
+  text-align: center;
+}
+
+.c8 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h1
+      className="c2"
+    >
+      Its a draw!
+    </h1>
+    <div>
+      <div
+        className="c3"
+      >
+        <h2
+          className="c4"
+        >
+          Current Score:
+        </h2>
+        <div
+          className="c5"
+        >
+          <h2
+            className="c6"
+          >
+            Player 
+            1
+            : 
+            0
+          </h2>
+          <h2
+            className="c7"
+          >
+            Player 
+            2
+            : 
+            0
+          </h2>
+          <h2>
+            Draw: 
+            0
+          </h2>
+        </div>
+      </div>
+      <div
+        className="c8"
+      >
+        <button
+          className="c9"
+          onClick={[Function]}
+        >
+          New Round
+        </button>
+        <button
+          className="c10"
+          onClick={[Function]}
+        >
+          Reset Score
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal component Should render correctly with passed props 1`] = `
+.c6 {
+  color: #545454;
+}
+
+.c7 {
+  color: #ffd02d;
+}
+
+.c5 {
+  font-family: "Montserrat",sans-serif;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.c9 {
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4%;
+  background: transparent;
+  border: 2px solid #ddbc95;
+  color: #ddbc95;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+  background: #ddbc95;
+  color: white;
+}
+
+.c9:hover {
+  color: white;
+  background: #ddbc95;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c9:hover {
+  color: #ddbc95;
+  background: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c10 {
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4%;
+  background: transparent;
+  border: 2px solid #ddbc95;
+  color: #ddbc95;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+
+.c10:hover {
+  color: white;
+  background: #ddbc95;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.c2 {
+  font-family: "Montserrat",sans-serif;
+  text-align: center;
+}
+
+.c0 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0%;
+  z-index: 1;
+  background: rgba(0,0,0,0.5);
+}
+
+.c1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border-radius: 5%;
+  width: 450px;
+  height: 400px;
+  background: white;
+  -webkit-transition: all 350ms cubic-bezier(0.68,-0.55,0.265,1.18);
+  transition: all 350ms cubic-bezier(0.68,-0.55,0.265,1.18);
+}
+
+.c3 {
+  text-align: center;
+}
+
+.c4 {
+  font-family: "Montserrat",sans-serif;
+  text-align: center;
+}
+
+.c8 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h1
+      className="c2"
+    >
+      Its a draw!
+    </h1>
+    <div>
+      <div
+        className="c3"
+      >
+        <h2
+          className="c4"
+        >
+          Current Score:
+        </h2>
+        <div
+          className="c5"
+        >
+          <h2
+            className="c6"
+          >
+            Player 
+            1
+            : 
+            0
+          </h2>
+          <h2
+            className="c7"
+          >
+            Player 
+            2
+            : 
+            0
+          </h2>
+          <h2>
+            Draw: 
+            0
+          </h2>
+        </div>
+      </div>
+      <div
+        className="c8"
+      >
+        <button
+          className="c9"
+          onClick={[Function]}
+        >
+          New Round
+        </button>
+        <button
+          className="c10"
+          onClick={[Function]}
+        >
+          Reset Score
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
